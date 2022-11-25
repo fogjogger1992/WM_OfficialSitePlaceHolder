@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #283b91, #222);
+  color: #fff;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  animation: fadein 1000ms ease;
+  -webkit-animation: fadein 1000ms ease;
+}
+
+.logo {
+  display: inline-block;
+  width: 180px;
+  margin: 0 auto 72px auto;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.dot {
+  color: #7bafde;
+}
+
+h1 > .dot {
+  animation: bounce 1.5s 0.5s linear infinite;
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  25% {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  75% {
+    filter: blur(2px);
+    opacity: 0;
+  }
+}
+
+.dot1 {
+  animation-delay: 0.1s !important;
+}
+.dot2 {
+  animation-delay: 0.2s !important;
+}
+.dot3 {
+  animation-delay: 0.3s !important;
+}
+
+p {
+  text-align: center;
+  margin: 18px auto 72px auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+}
+
+.icons {
+  text-align: center;
+}
+
+.icons i {
+  color: #283b91;
+  background: #fff;
+  font-size: 15px;
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 200ms ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.icons i:hover,
+.icons i:active {
+  color: #fff;
+  background: none;
+  cursor: pointer !important;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 954px) {
+  p {
+    text-align: left;
+  }
+}
